@@ -23,7 +23,7 @@ public class BootStrapData implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
         Publisher code88 = new Publisher();
         code88.setName("Code 88");
         code88.setAddressLine1("02 Truong Son");
@@ -36,27 +36,24 @@ public class BootStrapData implements CommandLineRunner {
 
         Author frank = new Author("Frank", "Tran");
         Book java = new Book("Java Programming", "123456");
-        frank.getBooks().add(java);
-        java.getAuthors().add(frank);
-        code88.getBooks().add(java);
-        java.setPublisher(code88);
-
-        authorRepository.save(frank);
-        bookRepository.save(java);
-        publisherRepository.save(code88);
+        save(code88, frank, java);
 
         Author patrik = new Author("Patrik", "Nguyen");
         Book designPattern = new Book("Java Design Pattern", "481628");
-        patrik.getBooks().add(designPattern);
-        designPattern.getAuthors().add(patrik);
-        code88.getBooks().add(designPattern);
-        designPattern.setPublisher(code88);
-
-        authorRepository.save(patrik);
-        bookRepository.save(designPattern);
-        publisherRepository.save(code88);
+        save(code88, patrik, designPattern);
 
         System.out.println("Number of Books: " + bookRepository.count());
         System.out.println("Publisher Number of Books: " + code88.getBooks().size());
+    }
+
+    private void save(Publisher publisher, Author author, Book book) {
+        author.getBooks().add(book);
+        book.getAuthors().add(author);
+        publisher.getBooks().add(book);
+        book.setPublisher(publisher);
+
+        authorRepository.save(author);
+        bookRepository.save(book);
+        publisherRepository.save(publisher);
     }
 }
