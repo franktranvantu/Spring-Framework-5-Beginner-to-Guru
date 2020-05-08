@@ -1,4 +1,4 @@
-package com.frank.springframework5.spring5webapp.domain;
+package com.frank.springframework5.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;

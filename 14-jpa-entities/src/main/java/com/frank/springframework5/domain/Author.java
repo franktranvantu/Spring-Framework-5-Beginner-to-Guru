@@ -1,4 +1,4 @@
-package com.frank.springframework5.spring5webapp.domain;
+package com.frank.springframework5.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -14,6 +14,7 @@ public class Author {
 
     private String firstName;
     private String lastName;
+
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
 

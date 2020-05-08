@@ -1,11 +1,11 @@
-package com.frank.springframework5.spring5webapp.bootstrap;
+package com.frank.springframework5.bootstrap;
 
-import com.frank.springframework5.spring5webapp.domain.Author;
-import com.frank.springframework5.spring5webapp.domain.Book;
-import com.frank.springframework5.spring5webapp.domain.Publisher;
-import com.frank.springframework5.spring5webapp.repositories.AuthorRepository;
-import com.frank.springframework5.spring5webapp.repositories.BookRepository;
-import com.frank.springframework5.spring5webapp.repositories.PublisherRepository;
+import com.frank.springframework5.repositories.AuthorRepository;
+import com.frank.springframework5.domain.Author;
+import com.frank.springframework5.domain.Book;
+import com.frank.springframework5.domain.Publisher;
+import com.frank.springframework5.repositories.BookRepository;
+import com.frank.springframework5.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

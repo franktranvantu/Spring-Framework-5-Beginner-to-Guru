@@ -1,4 +1,4 @@
-package com.frank.springframework5.spring5webapp.domain;
+package com.frank.springframework5.domain;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -17,6 +17,7 @@ public class Publisher {
     private String city;
     private String state;
     private String zip;
+
     @OneToMany
     @JoinColumn(name = "publisher_id")
     private Set<Book> books = new HashSet<>();

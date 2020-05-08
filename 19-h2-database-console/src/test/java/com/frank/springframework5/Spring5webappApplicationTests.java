@@ -1,4 +1,4 @@
-package com.frank.springframework5.spring5webapp;
+package com.frank.springframework5;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
