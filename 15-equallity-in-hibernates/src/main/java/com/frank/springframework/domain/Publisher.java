@@ -1,7 +1,6 @@
 package com.frank.springframework.domain;
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -9,7 +8,7 @@ import java.util.Set;
 public class Publisher {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
@@ -20,7 +19,7 @@ public class Publisher {
 
     @OneToMany
     @JoinColumn(name = "publisher_id")
-    private Set<Book> books = new HashSet<>();
+    private Set<Book> books;
 
     public Publisher() {
     }
@@ -31,15 +30,6 @@ public class Publisher {
         this.city = city;
         this.state = state;
         this.zip = zip;
-        this.books = books;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {

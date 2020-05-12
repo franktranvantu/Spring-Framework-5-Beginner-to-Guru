@@ -9,7 +9,7 @@ import java.util.Set;
 public class Publisher {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String name;
@@ -31,15 +31,6 @@ public class Publisher {
         this.city = city;
         this.state = state;
         this.zip = zip;
-        this.books = books;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
