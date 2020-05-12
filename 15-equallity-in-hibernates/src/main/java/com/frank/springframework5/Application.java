@@ -1,13 +1,13 @@
-package com.frank.springframework5.spring5webapp;
+package com.frank.springframework5;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Spring5webappApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Spring5webappApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
 }
