@@ -29,11 +29,9 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String isbn, Set<Author> authors, Publisher publisher) {
+    public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
-        this.authors = authors;
-        this.publisher = publisher;
     }
 
     public Long getId() {
